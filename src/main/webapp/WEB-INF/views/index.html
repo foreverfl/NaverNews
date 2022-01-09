@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<title>네이버 뉴스</title>
+	<style type="text/css">
+		/* #main_header */
+
+		#main_header {
+			/* centering */
+			margin: 0 auto;
+			/* coordinate */
+			height: 52px;
+			position: relative;
+			/* color */
+			color: white;
+			background: #3F63BF;
+		}
+
+		#gnb_1 {
+			position: absolute;
+			left: 400px;
+			top: 0;
+		}
+
+		#gnb_2 {
+			position: absolute;
+			right: 400px;
+			top: 0;
+		}
+
+		#gnb_1>ul {
+			overflow: hidden;
+			list-style: none;
+			margin: 15px 0;
+			padding: 0;
+		}
+
+		#gnb_1>ul>li {
+			float: left;
+		}
+
+		#gnb_1>ul>li>a {
+			display: inline-block;
+			padding: 0 10px;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		#gnb_2>ul {
+			overflow: hidden;
+			list-style: none;
+		}
+
+		#gnb_2>ul>li {
+			float: left;
+		}
+
+		#gnb_2>ul>li>a {
+			display: inline-block;
+			padding: 0 10px;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		/* separator */
+		#gnb_1>ul>li:after {
+			display: block;
+			float: right;
+			color: inherit;
+			content: "|";
+		}
+
+		#gnb_1>ul>li:last-child::after {
+			content: "";
+		}
+
+		/* #sub_header_1 */
+
+		#sub_header_1 {
+			/* centering */
+			margin: 0 auto;
+			/* coordinate */
+			height: 46px;
+			position: relative;
+			border-bottom: solid 1px #E5E5E5;
+		}
+
+		#lnb_category {
+			position: absolute;
+			left: 400px;
+			top: 0;
+		}
+
+		#lnb_category>ul {
+			overflow: hidden;
+			list-style: none;
+			margin: 15px 0;
+			padding: 0;
+		}
+
+		#lnb_category>ul>li {
+			float: left;
+		}
+
+		#lnb_category>ul>li>a {
+			display: inline-block;
+			padding: 0 10px;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		/* #sub_header_2 */
+
+		#sub_header_2 {
+			margin: 0 400px;
+			height: 51px;
+			position: relative;
+			border-bottom: solid 1px #828691;
+		}
+
+		#lnb_date {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		#lnb_date>ul {
+			overflow: hidden;
+			list-style: none;
+			margin: 15px 0;
+			padding: 0;
+		}
+
+		#lnb_date>ul>li {
+			float: left;
+		}
+
+		#lnb_etc {
+			position: absolute;
+			right: 0px;
+			top: 0;
+		}
+
+		#lnb_etc>ul {
+			overflow: hidden;
+			list-style: none;
+
+		}
+
+		#lnb_etc>ul>li {
+			float: left;
+		}
+
+		#lnb_etc>ul>li>a {
+			display: inline-block;
+			padding: 0 10px;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		/* title */
+		card_title {
+			
+		}
+		/* card news */
+
+
+		/* login button */
+
+		#login {
+			background: #486AC2;
+			color: white;
+			border: 0;
+			outline: solid #395089 1px;
+			padding: 3px;
+			font-size: 0.7rem;
+			cursor: pointer;
+		}
+
+		/* card title image */
+		#card_title {
+			width: 25px;
+			height: 25px;
+			border-radius: 70%;
+			overflow: hidden;			
+		}
+
+		#card_title_image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
+
+<body>
+	<header id="main_header">
+		<nav id="gnb_1">
+			<ul>
+				<li><a href="#">N</a></li>
+				<li><a href="#">연예</a></li>
+				<li><a href="#">스포츠</a></li>
+				<li><a href="#">날씨</a></li>
+				<li><a href="#">프리미엄</a></li>
+			</ul>
+		</nav>
+		<nav id="gnb_2">
+			<ul>
+				<li><a href="#"><button id="login">로그인</button></a></li>
+				<li><a href="#"><img src="../../../resources/images/menu.png" width="20"></a></li>
+				<li><a href="#"><img src="../../../resources/images/search.png" width="20"></a></li>
+			</ul>
+		</nav>
+	</header>
+	<header id="sub_header_1">
+		<nav id="lnb_category">
+			<ul>
+				<li><a href="#">언론사별</a></li>
+				<li><a href="#">정치</a></li>
+				<li><a href="#">경제</a></li>
+				<li><a href="#">사회</a></li>
+				<li><a href="#">생활/문화</a></li>
+				<li><a href="#">IT/과학</a></li>
+				<li><a href="#">세계</a></li>
+				<li><a href="#">랭킹</a></li>
+				<li><a href="#">신문보기</a></li>
+				<li><a href="#">오피니언</a></li>
+				<li><a href="#">TV</a></li>
+				<li><a href="#">팩트체크</a></li>
+			</ul>
+		</nav>
+	</header>
+	<header id="sub_header_2">
+		<nav id="lnb_date">
+			<ul>
+				<li id="date"></li>
+			</ul>
+		</nav>
+		<nav id="lnb_etc">
+			<ul>
+				<li><a href="#">전체 언론사</a></li>
+				<li><a href="#">뉴스스탠드</a></li>
+				<li><a href="#">라이브러리</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="content">
+		<section id="title">
+			<div>
+			</div>
+		</section>
+		<section id="cards">
+			<div id="card">
+				<div id="card_title">
+					<div id="card_title_image_box">
+						<img id="card_title_image" src="../../../resources/images/profiles/KBS.jpg">
+					</div>			
+					<span>KBS</span>						
+				</div>
+				<ul id="card_content">
+					<!--::after로 '>' 넣기-->
+					<li><a href=#>발리 푸른바다거북 도살 직전 구출됐지만…뱃속엔 ‘비닐봉지’</a><img src=""></li>
+					<li><a href=#>“연예인 마케팅 22억, 절반은 가맹점이 부담”…‘본사 갑질’ 논란</a><img src=""></li>
+					<li><a href=#>내일부터 대형마트도 방역패스…신규 확진 3,376명</a><img src=""></li>
+					<li><a href=#>李 “비정규직 공정수당 확대”…尹 “주먹구구 방역패스 폐기”</a><img src=""></li>
+					<li><a href=#>보험업계 “4세대 실손으로 갈아타면 1년간 보험료 50% 할인”</a><img src=""></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+
+	<footer></footer>
+	<script type="text/javascript">
+		// date
+		var Target = document.getElementById("date");
+		function date() {
+			var time = new Date();
+			var month = time.getMonth();
+			var date = time.getDate();
+			var day = time.getDay();
+			var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+			Target.innerText = `0${month + 1}.0${date}(${week[day]})`; // month 10, 11, 12일때는 0 안붙여야됨.. 그리고 date 10이상일때도 0 안붙여야됨
+
+		}
+		date();
+	</script>
+
+</body>
+</head>
+
+</html>
